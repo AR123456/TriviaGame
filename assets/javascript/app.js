@@ -53,7 +53,7 @@ var game ={
        game.done();
     }
   },
-  //setting up timer and putting questions and radio buttons into html
+  //setting up timer and putting questions and radio buttons into html sets interval clock updates to 1 sec
   start: function(){
     timer = setInterval(game.countdown,1000);
     $("#game-action").prepend('<h2>Time Remaining: <span id="counter">120</span> Seconds</h2>' );
@@ -61,7 +61,7 @@ var game ={
     for (var i = 0; i < questions.length; i++) {
       $("#game-action").append("<h2>" +questions[i].question+"</h2>");
       for (var m = 0; m < questions[i].choices.length; m++) {
-        $("#game-action").append("<input type= 'radio' name= 'question-"+i+"'value='"+questions[i].choices[m]+"'>"+questions[i].choices[m]);
+        $("#game-action").append("<input id='choices' type= 'radio' name= 'question-"+i+"'value='"+questions[i].choices[m]+"'>"+questions[i].choices[m]);
       }
     }
     $("#game-action").append('<br><button id="end">Done</button>');
@@ -119,7 +119,7 @@ var game ={
 //     game.incorrectAnswers++;
 //   }
 // });
-console.log("Correct Answers: " +this.correctAnswers);
+
 // writes results to HTML 
   this.result();  
   }, 
@@ -136,21 +136,7 @@ console.log("Correct Answers: " +this.correctAnswers);
 
 }
 
-// //variables 
-// var correctAnswers = 0;
-// var incorrectAnswers = 0;
-// var unanswered =0;
-// var timeRemaining =0;
-// var clockRunning = false;
-// // on start click event loop through questons and call show questions for each 
 
-// function showQuestion(question, choices){
- 
-// // use jquery to add the queston and choices to the correct html element 
-// // loop through choices with a "for each" loop and append the choice as a radio button 
-// // note: all the radio butons for question one should have the same name attribute . name atribute = queston + i  
-// }
-//timer object use a JS timer function called time out and set  interval to 60,000 then tell it what do do when time runs out 
 
 // NO CODE BELOW THIS LINE
 });
