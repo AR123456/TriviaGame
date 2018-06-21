@@ -1,2 +1,1 @@
-# TriviaGame
-Week 5 home work 
+# A basic one round trivia game built with JQuery 
